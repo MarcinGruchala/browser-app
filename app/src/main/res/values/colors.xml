@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="black">#FF000000</color>
+  <color name="mine_shaft">#3D3D3D</color>
+  <color name="persian_indigo">#531377</color>
+  <color name="purple_heart">#A332E2</color>
+  <color name="white">#FFFFFFFF</color>
+</resources>
