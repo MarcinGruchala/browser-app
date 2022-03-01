@@ -1,1 +1,3 @@
-# browser-app
+# Your Browser
+
+Browser application

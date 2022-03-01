@@ -1,15 +1,18 @@
+import com.yourbrowser.buildsrc.BuildConfiguration
+import com.yourbrowser.buildsrc.Dependencies
+
 plugins {
   id 'com.android.application'
   id 'org.jetbrains.kotlin.android'
 }
 
 android {
-  compileSdk 31
+  compileSdk = BuildConfiguration.compileSdk
 
   defaultConfig {
     applicationId "com.yourbrowser"
-    minSdk 29
-    targetSdk 31
+    minSdk = BuildConfiguration.DefaultConfig.minSdk
+    targetSdk = BuildConfiguration.DefaultConfig.targetSdk
     versionCode 1
     versionName "1.0"
 
@@ -27,17 +30,17 @@ android {
     targetCompatibility JavaVersion.VERSION_1_8
   }
   kotlinOptions {
-    jvmTarget = '1.8'
+    jvmTarget = BuildConfiguration.Kotlin.jvmTarget
   }
 }
 
 dependencies {
 
-  implementation 'androidx.core:core-ktx:1.7.0'
-  implementation 'androidx.appcompat:appcompat:1.3.0'
-  implementation 'com.google.android.material:material:1.4.0'
-  implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-  testImplementation 'junit:junit:4.13.2'
-  androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-  androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+  implementation(Dependencies.AndroidX.core)
+  implementation(Dependencies.AndroidX.appCompact)
+  implementation(Dependencies.UiDesign.material)
+  implementation(Dependencies.AndroidX.constraintLayout)
+  testImplementation(Dependencies.Test.junit)
+  androidTestImplementation(Dependencies.AndroidTest.junit)
+  androidTestImplementation(Dependencies.AndroidTest.espresso)
 }
